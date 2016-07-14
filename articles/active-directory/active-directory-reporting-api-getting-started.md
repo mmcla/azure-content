@@ -161,9 +161,10 @@ Edit one of the scripts below to work with your directory by replacing $ClientID
 
     echo $REPORT | ./jq-win64.exe -r '.value' | ./jq-win64.exe -r ".[]"
 
-### Python
+### Python 2.x
 	# Author: Michael McLaughlin (michmcla@microsoft.com)
 	# Date: January 20, 2016
+	# Tested in Python 2.7.10
 	# This requires the Python Requests module: http://docs.python-requests.org
 
 	import requests
@@ -172,7 +173,7 @@ Edit one of the scripts below to work with your directory by replacing $ClientID
 
 	client_id = 'your-application-client-id-here'
 	client_secret = 'your-application-client-secret-here'
-	login_url = 'https://login.windows.net/'
+	login_url = 'https://login.microsoftonline.com/'
 	tenant_domain = 'your-directory-name-here.onmicrosoft.com'
 
 	# Get an OAuth access token
